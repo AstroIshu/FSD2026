@@ -13,6 +13,9 @@ To create a multi-page SPA using client-side routing with a professional, modern
 - **Responsive Layout** - Fully responsive design that works on all devices
 - **Interactive Components** - Animated charts, progress bars, and hover effects
 - **Modern Tech Stack** - Built with React 19, Vite, and React Router DOM 7
+<img width="1919" height="1154" alt="Screenshot 2026-01-29 153118" src="https://github.com/user-attachments/assets/0e56f833-37ac-4a00-aa0a-4d0b3ea89e37" />
+<img width="1659" height="1153" alt="Screenshot 2026-01-29 153132" src="https://github.com/user-attachments/assets/cb3cf0f9-9dd5-41ec-86a2-afcbbb065857" />
+<img width="1919" height="1152" alt="Screenshot 2026-01-29 153141" src="https://github.com/user-attachments/assets/9bdc8987-d27a-41fa-b39a-e235096fdb69" />
 
 ## 📄 Pages
 
