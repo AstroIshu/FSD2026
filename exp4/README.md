@@ -28,12 +28,9 @@ Lazy loading is a performance optimization technique that defers loading of non-
 <img width="1912" height="1098" alt="Screenshot 2026-02-17 150913" src="https://github.com/user-attachments/assets/bfa40202-0d2a-4152-a609-91c7aaa145e9" />
 
 ##5.2
-
-<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/3cf9f1cb-69ef-4aa2-83a6-7e99d4cd6e9b" />
+<img width="1918" height="1102" alt="image" src="https://github.com/user-attachments/assets/ada73422-2816-4269-8bc6-38f0d74269be" />
 
 <img width="1919" height="1100" alt="image" src="https://github.com/user-attachments/assets/78c9a541-e646-46fa-ac93-7c6328592c66" />
-
-<img width="1916" height="1082" alt="image" src="https://github.com/user-attachments/assets/ba661198-a264-4e95-a446-6d192b5bca54" />
 
 
 ## 📊 Dashboard Features
