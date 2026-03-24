@@ -103,6 +103,11 @@ GET http://localhost:8080/api/students
     "id": 1,
     "name": "John Doe",
     "course": "Computer Science"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "course": "Information Technology"
   }
 ]
 ```
@@ -110,7 +115,7 @@ GET http://localhost:8080/api/students
 ### 2. Get Student by ID
 - **Method**: `GET`
 - **Endpoint**: `/api/students/{id}`
-- **Path Parameter**: `id` (integer)
+- **Path Parameter**: `id` (integer) - The ID of the student to retrieve
 - **Response**: Single student object
 - **Status Code**: `200 OK`
 
@@ -128,11 +133,11 @@ GET http://localhost:8080/api/students/1
 }
 ```
 
-### 3. Create New Student
+### 3. Create New Student (POST)
 - **Method**: `POST`
 - **Endpoint**: `/api/students`
 - **Content-Type**: `application/json`
-- **Request Body**: Student object
+- **Request Body**: Student object (id, name, course)
 - **Response**: Created student object
 - **Status Code**: `200 OK`
 
@@ -155,6 +160,58 @@ Content-Type: application/json
   "name": "Jane Smith",
   "course": "Information Technology"
 }
+```
+
+### 4. Update Student (PUT)
+- **Method**: `PUT`
+- **Endpoint**: `/api/students/{id}`
+- **Path Parameter**: `id` (integer) - The ID of the student to update
+- **Content-Type**: `application/json`
+- **Request Body**: Updated student object (name, course)
+- **Response**: Updated student object
+- **Status Code**: `200 OK`
+
+**Example Request**:
+```
+PUT http://localhost:8080/api/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "John Doe",
+  "course": "Data Science"
+}
+```
+
+**Example Response**:
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "course": "Data Science"
+}
+```
+
+### 5. Delete Student (DELETE)
+- **Method**: `DELETE`
+- **Endpoint**: `/api/students/{id}`
+- **Path Parameter**: `id` (integer) - The ID of the student to delete
+- **Response**: Success/failure message
+- **Status Code**: `200 OK`
+
+**Example Request**:
+```
+DELETE http://localhost:8080/api/students/2
+```
+
+**Example Response**:
+```
+Student deleted successfully
+```
+
+**Error Response** (if student not found):
+```
+Student not found
 ```
 
 ## Student Model
@@ -230,36 +287,23 @@ The `Student` table will be automatically created with columns:
    - Server running on `http://localhost:8080`
    - Database connected to MySQL instance
 
-4. ✅ **API Testing**: Verified endpoints are working
+4. ✅ **API Endpoints Implementation**: Added all CRUD operations
+   - GET `/api/students` - Get all students
+   - GET `/api/students/{id}` - Get student by ID
+   - POST `/api/students` - Create new student
+   - PUT `/api/students/{id}` - Update student ✨ **NEW**
+   - DELETE `/api/students/{id}` - Delete student ✨ **NEW**
+
+5. ✅ **API Testing**: Verified endpoints are working
    - GET `/api/students` returns HTTP 200
    - Postman POST request configured and ready for testing
+   - All CRUD operations documented with examples
 
 ### Database Connection
 - MySQL database `ishu` is automatically created if it doesn't exist
 - Student table is auto-generated using Hibernate
 - JPA handles all CRUD operations
 
-## Troubleshooting
-
-### Issue: `mvn command not found`
-**Solution**: Use the Maven wrapper: `mvnw.cmd` instead of `mvn`
-
-### Issue: `JAVA_HOME not defined`
-**Solution**: Install Java via conda:
-```bash
-conda install -c conda-forge openjdk=17 -y
-```
-
-### Issue: Database connection failed
-**Solution**: 
-1. Ensure MySQL is running
-2. Verify credentials in `application.properties`
-3. Ensure the `ishu` database exists or the app will create it
-
-### Issue: Port 8080 already in use
-**Solution**: Change the port in `application.properties`:
-```properties
-server.port=9090
 ```
 
 ## Next Steps
@@ -280,5 +324,5 @@ Key Maven dependencies included:
 
 ---
 
-**Created**: March 2, 2026  
+**Created**: March 24, 2026  
 **Status**: ✅ Running and Tested
